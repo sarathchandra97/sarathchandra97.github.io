@@ -1,8 +1,82 @@
 <html>
-	<head>
-		<title> my first wesite</title>
-	</head>
-	<body>
-		<h1>Hello World!!!</h1>
-	</body>
+  <head>
+    <title> sample web page</title>
+  </head>
+  <body >
+
+  <link rel="stylesheet" type="text/css" href="css/sample.css"> </link>
+  <script type="text/javascript" src="data.json"></script>
+
+  <script >
+      present_index=0;
+      records_length=0;
+
+      var mydata = JSON.parse(product_details);
+      var brand = JSON.parse(brand);
+      var color = JSON.parse(color);
+      var desc = JSON.parse(desc);
+      var price = JSON.parse(price);
+      records_length = mydata.length;
+
+      function sample(i){
+
+
+
+          present_index+=i;
+
+          present_index%=records_length;
+          update_details()
+      }
+      function update_details(){
+          //update title
+          var title = document.getElementById("title");
+          title.innerHTML=mydata[present_index].title;
+         //update image
+          var image = document.getElementById("image");
+          image.src=mydata[present_index].src;
+          //update table;
+
+          document.getElementById("brand").innerHTML=brand[present_index];
+          document.getElementById("color").innerHTML=color[present_index];
+          document.getElementById("desc").innerHTML=desc[present_index];
+          document.getElementById("price").innerHTML=price[present_index]+"rupes";
+
+
+
+      }
+
+
+  </script>
+  <center> <h1 id="title">RED SHIRT</h1></center>
+  <div>
+       <center>
+         <div class="image" >
+                <img src="image/red_shirt.jpg" id="image"> </img>
+
+       </div>
+
+         <center>
+  </div>
+
+  <br/>
+  <center>
+    <table>
+      <tr>
+        <th>head</th>
+        <th>details</th>
+      </tr>
+      <tr><td> brand </td><td id="brand"></td ></tr>
+      <tr><td> color </td><td  id="color"></td></tr>
+      <tr><td>description </td><td id="desc"></td ></tr>
+      <tr><td> price </td><td id="price"></td ></tr>
+
+
+    </table>
+    </div>
+  </center>
+
+  <button class="next_button" onclick="sample(1)"> next> </button>
+
+  </body>
+  <script>update_details()</script>
 </html>

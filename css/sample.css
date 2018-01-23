@@ -1,0 +1,54 @@
+.image{
+
+    height : 200px;
+    width : 200px;
+    border : 2px solid black;
+    border-radius : 10px;
+
+}
+img{
+
+    border-radius : 10px;
+    height : 100%;
+    width : 100%;
+}
+table,td,th,tr{
+    border : 2px solid black;
+    padding : 5px;
+    border-radius : 5px;
+    margin : 10px;
+
+}
+th,td{
+    height : 50px;
+    width : 100px;
+    color : white;
+    background-color : deepskyblue;
+    font-family : Arial;
+
+}
+tr,td,th{
+    margin : 20px;
+}
+button{
+
+    margin: 100px;
+    background-color : aliceblue;
+    font-family: Arial;
+    border-radius : 10px;
+    height : 50px;
+    width : 200px;
+    font-size : 30px;
+
+
+}
+button:hover{
+    color : white;
+    background-color: black;
+}
+next_button{
+    position : absolute;
+    top : 0px;
+    right : 0px;
+
+}
