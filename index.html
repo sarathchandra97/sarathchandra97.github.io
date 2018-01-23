@@ -2,7 +2,9 @@
   <head>
     <title> sample web page</title>
   </head>
-  <body >
+  <body>
+
+  <div>
 
   <link rel="stylesheet" type="text/css" href="css/sample.css"> </link>
   <script type="text/javascript" src="data.json"></script>
@@ -22,7 +24,7 @@
 
 
 
-          present_index+=i;
+          present_index+=records_length+i;
 
           present_index%=records_length;
           update_details()
@@ -41,25 +43,28 @@
           document.getElementById("desc").innerHTML=desc[present_index];
           document.getElementById("price").innerHTML=price[present_index]+"rupes";
 
-
+          //update backround_image
+          document.getElementById("b").src = mydata[present_index].src;
 
       }
 
 
   </script>
-  <center> <h1 id="title">RED SHIRT</h1></center>
+    <center>
+
+   <h1 id="title">RED SHIRT</h1></center>
   <div>
-       <center>
+
          <div class="image" >
                 <img src="image/red_shirt.jpg" id="image"> </img>
 
        </div>
 
-         <center>
+
   </div>
 
   <br/>
-  <center>
+
     <table>
       <tr>
         <th>head</th>
@@ -72,11 +77,14 @@
 
 
     </table>
-    </div>
-  </center>
 
-  <button class="next_button" onclick="sample(1)"> next> </button>
+
+  </div>
+  <button class="prev_button" onclick="sample(-1)"> < </button>
+  <button class="next_button" onclick="sample(1)"> > </button>
+
 
   </body>
+  <img class="b" id="b" src="image/A.jpg"></img>
   <script>update_details()</script>
 </html>
