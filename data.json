@@ -1,6 +1,0 @@
-product_details = '[{"title":"red-shirt","src" : " image/red_shirt.jpg"},{"title" :"blue-jacket","src" : "image/blue_jacket.png" },{"title":"black-jacket","src" :"image/coat.jpg"}]';
-brand='["lee","levis","tommy"]';
-color='["red","blue","black"]';
-desc = '["newly arrvied","newly arrived","new arvied"]';
-measurements = '["l,42","m,21","xl,21"]';
-price = '["120","200","350"]';

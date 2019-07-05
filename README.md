@@ -1,2 +1,8 @@
 # sarathchandra97.github.io
-my static website
+My static web site 
+
+site link : https://sarathchandra97.github.io/
+
+##It should contians
+* portfolio 
+* some other stuff
